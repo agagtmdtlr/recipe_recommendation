@@ -43,3 +43,6 @@
 
 ## 프로젝트 실행   
  - web_service : main.py 실행
+ ![main show](https://user-images.githubusercontent.com/55948026/86917171-9e4b2480-c15f-11ea-8c9e-4b494dfe44d5.PNG)
+ ![recommend list](https://user-images.githubusercontent.com/55948026/86917175-9f7c5180-c15f-11ea-9d7d-d7b336973864.PNG)
+ ![recipe detail](https://user-images.githubusercontent.com/55948026/86917179-a014e800-c15f-11ea-8882-f5e6e9e74345.PNG)
