@@ -1,0 +1,61 @@
+create user recommend IDENTIFIED by oracle account unlock;​
+
+alter user recommend default tablespace users;
+
+alter user recommend
+
+quota unlimited on users;
+
+grant connect, resource to recommend;
+
+grant create view to recommend;
+
+##########################################
+
+drop table recipe_infos;
+commit;
+create table recipe_infos (
+    recipe_id varchar2(255),
+    cat1 varchar2(255),
+    cat2 varchar2(255),
+    cat3 varchar2(255),
+    cat4 varchar2(255),
+    rec_title clob default empty_clob(),
+    rec_sub clob default empty_clob(),
+    rec_source clob default empty_clob(),
+    rec_step clob default empty_clob()
+);
+commit;
+
+create table recipe_table
+as
+select * from recipe_infos where regexp_like(id,'^[0-9]+$');
+commit;
+#########################################
+
+create table recipe_kwd_sources (
+    recipe_id varchar2(255),
+    rec_title clob default empty_clob(),
+    kwd_source clob default empty_clob()
+);
+commit;
+
+### 데이터 임포트 #####
+### kwd_source.csv ####
+
+###############################################
+
+create table recipe_finals
+as
+select t1.recipe_id,
+t1.cat1,t1.cat2,t1.cat3,t1.cat4,t1.rec_title,t1.rec_sub,t1.rec_source,t1.rec_step,t2.kwd_source from
+ (select * from recipe_table ) t1
+ inner join
+ (select * from recipe_kwd_sources ) t2
+ on t1.recipe_id = t2.recipe_id;
+commit;
+
+#### select_all_db() ###
+### recipe_nlp.csv ####
+
+######
