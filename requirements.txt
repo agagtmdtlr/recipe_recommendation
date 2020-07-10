@@ -1,0 +1,11 @@
+numpy
+pandas
+tensorflow
+tensorboard
+matplotlib
+konlpy
+gensim
+wordcloud
+sklearn
+opencv-python
+Flask

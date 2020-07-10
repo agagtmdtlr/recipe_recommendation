@@ -1,5 +1,5 @@
-from refrigerator_recipe.computer_vision.write_tfrecord import get_path,to_tfrecords,label_dict,seperate_data,suffle_data,shuffle_to_record
-from refrigerator_recipe.pre_processing.image_generator import ImgGenerator
+from recipe_recommendation.computer_vision.write_tfrecord import get_path,to_tfrecords,label_dict,seperate_data,suffle_data,shuffle_to_record
+from recipe_recommendation.pre_processing.image_generator import ImgGenerator
 from multiprocessing import Pool
 
 if __name__ == '__main__':

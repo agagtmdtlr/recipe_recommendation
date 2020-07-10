@@ -5,9 +5,9 @@ import os
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import pickle
-from refrigerator_recipe.computer_vision.cv_model import ResNet,Own,img64NN,img224NN
-from refrigerator_recipe.computer_vision.cv_dataset import DataSet
-from refrigerator_recipe.computer_vision.cv_keras_model import keras_resnet50,keras_vgg16,keras_resnet152
+from recipe_recommendation.computer_vision.cv_model import ResNet,Own,img64NN,img224NN
+from recipe_recommendation.computer_vision.cv_dataset import DataSet
+from recipe_recommendation.computer_vision.cv_keras_model import keras_resnet50,keras_vgg16,keras_resnet152
 from tensorflow.python.keras import losses
 
 if __name__ == '__main__':

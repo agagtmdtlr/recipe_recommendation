@@ -9,15 +9,15 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from datetime import datetime
 from tensorflow.python.keras.preprocessing.image import load_img,img_to_array
-from refrigerator_recipe.computer_vision.cv_predict import Prediction
-from refrigerator_recipe.Recomend.recommend_main import *
+from recipe_recommendation.computer_vision.cv_predict import Prediction
+from recipe_recommendation.Recomend.recommend_main import *
+from recipe_recommendation.computer_vision.cv_model import ResNet
 from werkzeug.utils import secure_filename
 import os
 from flask import Response
 import io
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-from refrigerator_recipe.computer_vision.cv_model import ResNet
 
 class Datas:
     def __init__(self):

@@ -1,6 +1,6 @@
 
 import numpy as np
-from refrigerator_recipe.computer_vision.cv_model import ResNet
+from recipe_recommendation.computer_vision.cv_model import ResNet
 
 class Prediction:
     def __init__(self,model_path,label_path):

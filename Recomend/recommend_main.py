@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 from tensorflow.python.keras.preprocessing.image import load_img,img_to_array
-from refrigerator_recipe.computer_vision.cv_predict import Prediction
+from recipe_recommendation.computer_vision.cv_predict import Prediction
 
 def calculate_distance(x,y):
     lens = len(x)
